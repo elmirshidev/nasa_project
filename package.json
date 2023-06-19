@@ -1,0 +1,19 @@
+{
+  "name": "nasa_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run watch --prefix server ",
+    "client": "npm run start --prefix client",
+    "start": "concurrently \"npm:server\" \"npm:client\"" ,
+    "deploy" : "set BUILD_PATH=../server/public&& npm run build --prefix client" ,
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
